@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="multi-source,DomainNet" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="http:&#x2F;&#x2F;ai.bu.edu&#x2F;M3SDA&#x2F; contribution&#x2F;abstract 收集并标记了当前最大的非监督domain adaptation（UDA）数据集DomainNet。 6个域——domain数量更多 0.6million张图像——图像数量更多 345类——类别数量更多      提出全新的$M^3SDA$方法(Moment Matching for Multi-Source">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Moment Matching for Multi-Source Domain Adaptation">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;index.html">
+<meta property="og:site_name" content="Jingge&#39;s blog">
+<meta property="og:description" content="http:&#x2F;&#x2F;ai.bu.edu&#x2F;M3SDA&#x2F; contribution&#x2F;abstract 收集并标记了当前最大的非监督domain adaptation（UDA）数据集DomainNet。 6个域——domain数量更多 0.6million张图像——图像数量更多 345类——类别数量更多      提出全新的$M^3SDA$方法(Moment Matching for Multi-Source">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;捕获.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;2.PNG">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191210184741120.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211181809366.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211202302166.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211214503667.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211215238839.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211215632562.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211215817561.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211215904130.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211220411306.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211221309322.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211221349238.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;image-20191211221416324.png">
+<meta property="article:published_time" content="2019-12-10T02:41:52.000Z">
+<meta property="article:modified_time" content="2019-12-13T07:51:10.969Z">
+<meta property="article:author" content="Jingge">
+<meta property="article:tag" content="multi-source">
+<meta property="article:tag" content="DomainNet">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;Moment-Matching-for-Multi-Source-Domain-Adaptation&#x2F;捕获.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/10/Moment-Matching-for-Multi-Source-Domain-Adaptation/"/>
+
+
+
+
+
+  <title>Moment Matching for Multi-Source Domain Adaptation | Jingge's blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jingge's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/10/Moment-Matching-for-Multi-Source-Domain-Adaptation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jingge">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jingge's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Moment Matching for Multi-Source Domain Adaptation</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-10T10:41:52+08:00">
+                2019-12-10
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-13T15:51:10+08:00">
+                2019-12-13
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Paper-Reading/" itemprop="url" rel="index">
+                    <span itemprop="name">Paper Reading</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="http://ai.bu.edu/M3SDA/" target="_blank" rel="noopener">http://ai.bu.edu/M3SDA/</a></p>
+<h1 id="contribution-abstract"><a href="#contribution-abstract" class="headerlink" title="contribution/abstract"></a>contribution/abstract</h1><ol>
+<li>收集并标记了当前最大的非监督domain adaptation（UDA）数据集<strong>DomainNet</strong>。<ul>
+<li>6个域——domain数量更多</li>
+<li>0.6million张图像——图像数量更多</li>
+<li>345类——类别数量更多</li>
+</ul>
+</li>
+</ol>
+<p><img src="捕获.PNG" alt=""></p>
+<ol>
+<li><p>提出全新的$M^3SDA$方法(Moment Matching for Multi-Source Domain Adaptation)，该方法通过动态对齐moments of feature distribution，将多个source迁移到target。</p>
+</li>
+<li><p>拓展了moment matching方法的理论证明。</p>
+</li>
+</ol>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p><strong>single source方法</strong></p>
+<ul>
+<li>传统UDA方法：MMD距离嵌入神经网络[27, 41, 25]</li>
+<li>aligning source and target second order correlation[39, 32],</li>
+<li>moment matching [47]</li>
+<li>adversarial domain confusion [40, 8, 38]</li>
+<li>GAN-based alignment[50, 15, 23].</li>
+</ul>
+<p><strong>multi-source domain adaptation(MSDA)方法</strong></p>
+<ul>
+<li>multi-source理论分析[1, 28, 4, 49, 14]</li>
+<li>应用工作：use an adversarial discriminator to align the multi-source domains with the target domain[6, 45]</li>
+</ul>
+<p><strong>datset方面的问题</strong></p>
+<ul>
+<li>lack of large-scale domain adaptation datasets<ul>
+<li>图像数量少</li>
+<li>类别少</li>
+</ul>
+</li>
+<li>在这些数据集上，模型准确率高—-saturation饱和</li>
+</ul>
+<h1 id="2-related-work"><a href="#2-related-work" class="headerlink" title="2. related work"></a>2. related work</h1><h2 id="2-1-Domain-Adaptation-Datasets"><a href="#2-1-Domain-Adaptation-Datasets" class="headerlink" title="2.1 Domain Adaptation Datasets"></a>2.1 Domain Adaptation Datasets</h2><p><img src="2.PNG" style="zoom:67%;" /></p>
+<h2 id="2-2-Single-source-UDA"><a href="#2-2-Single-source-UDA" class="headerlink" title="2.2 Single-source UDA"></a>2.2 Single-source UDA</h2><p>3类single source的domain adaptation方法：</p>
+<h3 id="2-2-1-discrepancy-based-DA-approach"><a href="#2-2-1-discrepancy-based-DA-approach" class="headerlink" title="2.2.1 discrepancy-based DA approach"></a>2.2.1 discrepancy-based DA approach</h3><p>Maximum Mean Discrepancy (MMD) is applied to reduce distribution shift in various methods基于MMD距离的方法</p>
+<ul>
+<li>DaNN：【9】 Domain adaptive neural networks for object recognition.</li>
+<li>DDC：【41】</li>
+<li>JAN：【27】</li>
+<li>【44】Visual domain adaptation with manifold embedded distribution alignment</li>
+</ul>
+<p>其他的度量方法：</p>
+<ul>
+<li><p>correlation alignment[39, 32]</p>
+</li>
+<li><p>Kullback-Leibler (KL) divergence [51]</p>
+</li>
+<li>H divergence [1]</li>
+</ul>
+<h3 id="2-2-2-adversarial-based-approach"><a href="#2-2-2-adversarial-based-approach" class="headerlink" title="2.2.2 adversarial-based approach"></a>2.2.2 adversarial-based approach</h3><p>A domain discriminator is leveraged to encourage the domain<br>confusion by an adversarial objective. </p>
+<ul>
+<li>Among these approaches, <strong>generative adversarial networks</strong> are widely used to learn domain-invariant features as well to generate fake source or target data.</li>
+<li>Other frameworks utilize only adversarial loss to bridge two domains.</li>
+</ul>
+<p>【24】Ming-Yu Liu and Oncel Tuzel. Coupled generative adversarial<br>networks. In Advances in neural information processing<br>systems, pages 469–477, 2016. 2</p>
+<p>【40】Eric Tzeng, Judy Hoffman, Kate Saenko, and Trevor Darrell.<br>Adversarial discriminative domain adaptation. In Computer<br>Vision and Pattern Recognition (CVPR), volume 1, page 4, 2017  1, 2, 6, 7, 8</p>
+<h3 id="2-2-3-reconstruction-based-approach"><a href="#2-2-3-reconstruction-based-approach" class="headerlink" title="2.2.3 reconstruction-based approach"></a>2.2.3 reconstruction-based approach</h3><p>假设数据重建能帮助DA模型学习领域不变的特征。</p>
+<ul>
+<li>encoder-decoder[3, 10]</li>
+<li>GAN discriminator<ul>
+<li>such as GAN [46]</li>
+<li>cycle-GAN [50]</li>
+<li>disco-GAN [16]</li>
+<li>Cy-CADA [15]</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-Multi-Source-Domain-Adaptation"><a href="#2-3-Multi-Source-Domain-Adaptation" class="headerlink" title="2.3 Multi-Source Domain Adaptation"></a>2.3 Multi-Source Domain Adaptation</h2><ul>
+<li><p>理论分析</p>
+<p>[1] 引入$\cal H \Delta \cal H$-divergence作为不同source的weights</p>
+<p>[4]  establish a general bound on the expected loss of the model by minimizing the empirical loss on the nearest k sources</p>
+<p>[28] 表明target的假设可以用source的假设加权表示出来。</p>
+</li>
+<li><p>应用</p>
+<p>[45] Deep Cocktail Network(DCTN)用于数字识别和实际目标检测</p>
+<p>[14]</p>
+<p>[6] Domain Selection Machine用于用户视频事件识别</p>
+</li>
+</ul>
+<h2 id="2-4-Moment-（矩）Matching"><a href="#2-4-Moment-（矩）Matching" class="headerlink" title="2.4 Moment （矩）Matching"></a>2.4 Moment （矩）Matching</h2><p>用于度量不同分布之间的差异</p>
+<ul>
+<li>MMD：matches the first moments of two distributions（一阶矩？？？）</li>
+<li>二阶矩【39】</li>
+<li>align infinte-dimensional covariance matrices in RKHS【48】</li>
+<li>高阶矩Central Moment Discrepancy (CMD).【47】</li>
+<li>GAN-based moment matching approaches【29,22,20】</li>
+</ul>
+<h1 id="3-The-DomainNet-dataset"><a href="#3-The-DomainNet-dataset" class="headerlink" title="3. The DomainNet dataset"></a>3. The DomainNet dataset</h1><p>6个domain，每个有345类</p>
+<ul>
+<li>Clipart剪贴画</li>
+<li>Infograph信息图</li>
+<li>Painting艺术画</li>
+<li>Quickdraw简笔画</li>
+<li>Real真实场景图像</li>
+<li>Sketch素描图</li>
+</ul>
+<p>图2分别展示了：</p>
+<ul>
+<li>每个类别的样本在各个domain上的分布，竖着看，可以看到各个类别基本在每个domain都是有一定的分布的。</li>
+<li>每个domain的大类的分布，即每个域大概都有哪些类，看同一个颜色，可以看出domain是有差异的。</li>
+</ul>
+<p><img src="image-20191210184741120.png" alt=""></p>
+<h1 id="4-Moment-Matching-for-Multi-Source-DA"><a href="#4-Moment-Matching-for-Multi-Source-DA" class="headerlink" title="4. Moment Matching for Multi-Source DA"></a>4. Moment Matching for Multi-Source DA</h1><h2 id="4-1-setup"><a href="#4-1-setup" class="headerlink" title="4.1 setup"></a>4.1 setup</h2><ul>
+<li><p>source domain:</p>
+<script type="math/tex; mode=display">
+\cal D_s=\{D_1,D_2,...,D_\mathit{N}\} \notag</script></li>
+<li><p>target domain：</p>
+<p>无标签——unsupervised   $\mathcal{D}_T$</p>
+</li>
+<li><p>从source加上target这一共$N+1$个domain里，独立同分布采样$N+1$次，得到样本集合$N+1$个：</p>
+<script type="math/tex; mode=display">
+\mathbf{X}_1,\mathbf{X}_2,...,\mathbf{X}_N,\mathbf{X}_T \notag</script></li>
+<li><p>定义Moment Distance距离为：</p>
+<script type="math/tex; mode=display">
+\begin{aligned} M D^{2}\left(\mathcal{D}_{S}, \mathcal{D}_{T}\right) &=\sum_{k=1}^{2}\left(\frac{1}{N} \sum_{i=1}^{N}\left\|\mathbb{E}\left(\mathbf{X}_{i}^{k}\right)-\mathbb{E}\left(\mathbf{X}_{T}^{k}\right)\right\|_{2}\right.\\ &\left.+\left(\begin{array}{c}{N} \\ {2}\end{array}\right)^{-1} \sum_{i=1}^{N-1} \sum_{j=i+1}^{N}\left\|\mathbb{E}\left(\mathbf{X}_{i}^{k}\right)-\mathbb{E}\left(\mathbf{X}_{j}^{k}\right)\right\|_{2}\right) \end{aligned} \tag{1}</script></li>
+</ul>
+<p>可以看到，距离由两部分组成：</p>
+<ul>
+<li>每个source和target的差异</li>
+<li>每两个source之间的差异</li>
+</ul>
+<h2 id="4-2-M-3SDA"><a href="#4-2-M-3SDA" class="headerlink" title="4.2 M^3SDA"></a>4.2 M^3SDA</h2><p><img src="image-20191211181809366.png" alt=""></p>
+<p><strong>模型3部分：</strong></p>
+<ul>
+<li>feature extractor $G$：将source域$\mathcal D_S$和target域$\cal{D}_T$都map到共同特征隐空间。</li>
+<li>moment matching component：中间一行表示希望将第i和第j个source域匹配起来；上行表示希望将第i个source域和target匹配起来；下行表示希望将第j个source域和target匹配起来。<ul>
+<li>匹配即是最小化（1）式所示的moment-related距离。</li>
+<li>这个过程也就是找到最小化距离的feature extractor $G$</li>
+</ul>
+</li>
+<li>classifiers：不同source在标签的source数据集上训练，用cross-entropy损失，出来一共$N$个分类器$\mathcal C=\{C_1,C_2,…,C_N\}$，经过weight之后得到最后的target的预测结果。</li>
+</ul>
+<p><strong>overall objective function</strong></p>
+<script type="math/tex; mode=display">
+\min _{G, C} \sum_{i=1}^{N} \mathcal{L}_{\mathcal{D}_{i}}+\lambda \min _{G} M D^{2}\left(\mathcal{D}_{S}, \mathcal{D}_{T}\right)\tag{2}</script><p>其中$\cal L_{D_i}$表示在第i个source域上的分类器的softmax cross entropy loss</p>
+<h2 id="4-3-M-3SDA-β"><a href="#4-3-M-3SDA-β" class="headerlink" title="4.3 M^3SDA-β"></a>4.3 M^3SDA-β</h2><p><strong>motivation</strong></p>
+<ul>
+<li>M^3SDA假设对齐（匹配）了$p(x)$后，条件概率$p(y|x)$就自动同时对齐了。实际中并不总是成立。</li>
+<li>本节$\beta$方法同时对齐边缘概率分布和条件概率分布。</li>
+</ul>
+<p><strong>main idea</strong></p>
+<ul>
+<li>参考【38：Maximum Classifier Discrepancy for Unsupervised Domain Adaptation】的训练范式，我们在每个source域上定义一对分类器，即：</li>
+</ul>
+<script type="math/tex; mode=display">
+\mathcal C ^\prime = \{(C_1,C_1^\prime),(C_2,C_2^\prime),...,(C_N,C_N^\prime)\}\notag</script><ul>
+<li>【38】根据对抗adversarial的思想，domain classifier（discriminator判别器）和feature generator（生成器）是用来对齐分布的。</li>
+<li>【38】source和target样本都是相同的feature生成器的输入，生成器的输出（feature），被判别器和task-specific的分类器共享。</li>
+<li>判别器训练来分辨生成器生成的特征对应的域标签</li>
+<li>而生成器进行对抗训练，以使判别器无法分辨</li>
+<li>生成器的目标是匹配source和target的分布，因为这样能够使生成的特征相似，从而判别器难以分辨source和target，也就是在source上训练的判别器，也可以判别来自target的特征，——假设task-specific的分类器可以正确分类来自target的特征。</li>
+</ul>
+<p>3步训练周期进行直到整个网络收敛：</p>
+<ul>
+<li><p>训练特征提取器$G$和分类器对$\cal C ^\prime$来正确分类每一个source的样本；</p>
+</li>
+<li><p>固定$G$，训练分类器对，使得每一对分类器在target上的分类结果差异最大。根据【38】，也就是在最小化分类loss的同时，使每个source得到的一对分类器对target的分类结果相差最大，可以表示为：</p>
+<script type="math/tex; mode=display">
+\min _{\mathcal{C}^{\prime}} \sum_{i=1}^{N} \mathcal{L}_{\mathcal{D}_{i}}-\sum_{i}^{N}\left|P_{C_{i}}\left(D_{T}\right)-P_{C_{i}^{\prime}}\left(D_{T}\right)\right|\tag{3}</script></li>
+<li><p>固定分类器对，训练$G$，即训练得到不同的特征分布，使得可以最小化每一对分类器在target上的分类结果差异，优化目标可以表示为：</p>
+<script type="math/tex; mode=display">
+\min _G \sum_i^N|P_{C_i}(D_T)-P_{C_i^{\prime}}(D_T)| \tag{4}</script></li>
+</ul>
+<p>根据38原文，参考过程示意图如下，是对任意一个source：</p>
+<p><img src="image-20191211202302166.png" alt=""></p>
+<h2 id="4-4-Ensemble-Schema整合架构"><a href="#4-4-Ensemble-Schema整合架构" class="headerlink" title="4.4 Ensemble Schema整合架构"></a>4.4 Ensemble Schema整合架构</h2><p>测试阶段，测试数据的结果要整合N个分类器的输出：</p>
+<ul>
+<li><p>对分类器输出取平均，记为$M^3SDA^{∗}$</p>
+</li>
+<li><p>加权 $\mathcal W = (w_1,…,w_{N-1})$ ，假设第$N$个是target域。</p>
+<ul>
+<li><p>每个分量应该都是衡量source和target的域的固有的相似性（closeness）的。</p>
+</li>
+<li><p>我们这里简单认为， 在source上准确率高的，应该分配更高的权重，因为更值得信任（好像跟closeness没有啥关系）</p>
+<script type="math/tex; mode=display">
+w_i = \frac{acc_i}{\sum_{j=1}^{N-1}acc_j} \notag</script></li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-Theoretical-Insight"><a href="#4-5-Theoretical-Insight" class="headerlink" title="4.5 Theoretical Insight"></a>4.5 Theoretical Insight</h2><p>we introduce the k-th order cross-moment divergence between domains</p>
+<h1 id="5-Experiments"><a href="#5-Experiments" class="headerlink" title="5. Experiments"></a>5. Experiments</h1><h2 id="5-1-Digit-Recognition"><a href="#5-1-Digit-Recognition" class="headerlink" title="5.1 Digit Recognition"></a>5.1 Digit Recognition</h2><p><strong>dataset</strong></p>
+<ul>
+<li>5 digit datasets: MNIST, SVHN, MNIST-M, Sythetic Digits, USPS</li>
+<li>前4个进行采样处理。</li>
+<li>5个轮流挑一个出来作为target，剩下的作为source。</li>
+</ul>
+<p><strong>baseline</strong></p>
+<ul>
+<li><p>discrepancy-based approaches</p>
+<ul>
+<li><p>Deep Adaptation Network [25] (DAN)</p>
+</li>
+<li><p>Joint Adaptation Network (JAN)</p>
+</li>
+<li><p>Manifold Embedded Distribution Alignment (MEDA）</p>
+</li>
+<li><p>Correlation Alignment [39] (CORAL)</p>
+</li>
+</ul>
+</li>
+<li><p>adversarial-based approaches</p>
+<ul>
+<li>Domain Adversarial Neural Network [8] (DANN)</li>
+<li>Adversarial Discriminative Domain Adaptation [40] (ADDA)</li>
+<li>Maximum Classifier Discrepancy (MCD) </li>
+<li>Deep Cocktail Network [45] (DCTN)</li>
+</ul>
+</li>
+</ul>
+<p>baseline的source  combine是直接把多个source加在一起作为single-source</p>
+<p><img src="image-20191211214503667.png" style="zoom:150%;" /></p>
+<p>MNIST-M数据集上结果偏低，可能是因为出现了负迁移[31]。</p>
+<h2 id="5-2-OfficeCaltech10"><a href="#5-2-OfficeCaltech10" class="headerlink" title="5.2 OfficeCaltech10"></a>5.2 OfficeCaltech10</h2><p>10 object categories from 4 different domains: Amazon, Caltech, DSLR, and Webcam.</p>
+<p><img src="image-20191211215238839.png" style="zoom:67%;" /></p>
+<p>AlexNet的结果没有ResNet-101好。</p>
+<h2 id="5-2-DomainNet"><a href="#5-2-DomainNet" class="headerlink" title="5.2 DomainNet"></a>5.2 DomainNet</h2><h3 id="5-3-1-Single-Source-Adaptation"><a href="#5-3-1-Single-Source-Adaptation" class="headerlink" title="5.3.1 Single-Source Adaptation"></a>5.3.1 Single-Source Adaptation</h3><p><img src="image-20191211215632562.png" style="zoom:50%;" /></p>
+<p><img src="image-20191211215817561.png" alt=""></p>
+<p><img src="image-20191211215904130.png" alt=""></p>
+<p>infograph和quickdraw domain识别率低。</p>
+<h3 id="5-3-2-Multi-Source-Domain-Adaptation"><a href="#5-3-2-Multi-Source-Domain-Adaptation" class="headerlink" title="5.3.2 Multi-Source Domain Adaptation"></a>5.3.2 Multi-Source Domain Adaptation</h3><p><img src="image-20191211220411306.png" alt=""></p>
+<p>其中single-best是前面DomainNet的单个source实验中，各自表现最好的结果。</p>
+<p>source combine是5个source直接combine成一个。</p>
+<h3 id="Effect-of-Category-Number"><a href="#Effect-of-Category-Number" class="headerlink" title="Effect of Category Number"></a>Effect of Category Number</h3><p><img src="image-20191211221309322.png" style="zoom:67%;" /></p>
+<p><img src="image-20191211221349238.png" alt=""></p>
+<p><img src="image-20191211221416324.png" alt=""></p>
+<p>类别数量增多，效果都有下降。</p>
+<h1 id="6-Conclusion"><a href="#6-Conclusion" class="headerlink" title="6. Conclusion"></a>6. Conclusion</h1><ul>
+<li>本文收集并分析了数据集DomainNet</li>
+<li>提出$M^3SDA$</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:</strong>
+    Jingge
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link:</strong>
+    <a href="http://yoursite.com/2019/12/10/Moment-Matching-for-Multi-Source-Domain-Adaptation/" title="Moment Matching for Multi-Source Domain Adaptation">http://yoursite.com/2019/12/10/Moment-Matching-for-Multi-Source-Domain-Adaptation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice: </strong>
+    All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            
+            <a href="/tags/Paper-Reading/" rel="tag"><i class="fa fa-tags"></i> Paper Reading</a>
+          
+            
+            <a href="/tags/Domain-Adaptation/" rel="tag"><i class="fa fa-tags"></i> Domain Adaptation</a>
+          
+            
+            <a href="/tags/Transfer-Learning/" rel="tag"><i class="fa fa-tags"></i> Transfer Learning</a>
+          
+            
+            <a href="/tags/Multi-source-Learning/" rel="tag"><i class="fa fa-tags"></i> Multi-source Learning</a>
+          
+            
+            <a href="/tags/Visual-Domain-Adaptation-Challenge-2019/" rel="tag"><i class="fa fa-tags"></i> Visual Domain Adaptation Challenge 2019</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/09/hexo%E4%BD%BF%E7%94%A8/" rel="next" title="hexo使用">
+                <i class="fa fa-chevron-left"></i> hexo使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jingge</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#contribution-abstract"><span class="nav-text">contribution&#x2F;abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-related-work"><span class="nav-text">2. related work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Domain-Adaptation-Datasets"><span class="nav-text">2.1 Domain Adaptation Datasets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Single-source-UDA"><span class="nav-text">2.2 Single-source UDA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-discrepancy-based-DA-approach"><span class="nav-text">2.2.1 discrepancy-based DA approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-adversarial-based-approach"><span class="nav-text">2.2.2 adversarial-based approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-reconstruction-based-approach"><span class="nav-text">2.2.3 reconstruction-based approach</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Multi-Source-Domain-Adaptation"><span class="nav-text">2.3 Multi-Source Domain Adaptation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Moment-（矩）Matching"><span class="nav-text">2.4 Moment （矩）Matching</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-The-DomainNet-dataset"><span class="nav-text">3. The DomainNet dataset</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Moment-Matching-for-Multi-Source-DA"><span class="nav-text">4. Moment Matching for Multi-Source DA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-setup"><span class="nav-text">4.1 setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-M-3SDA"><span class="nav-text">4.2 M^3SDA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-M-3SDA-β"><span class="nav-text">4.3 M^3SDA-β</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-Ensemble-Schema整合架构"><span class="nav-text">4.4 Ensemble Schema整合架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-Theoretical-Insight"><span class="nav-text">4.5 Theoretical Insight</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Experiments"><span class="nav-text">5. Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-Digit-Recognition"><span class="nav-text">5.1 Digit Recognition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-OfficeCaltech10"><span class="nav-text">5.2 OfficeCaltech10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-DomainNet"><span class="nav-text">5.2 DomainNet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-1-Single-Source-Adaptation"><span class="nav-text">5.3.1 Single-Source Adaptation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-2-Multi-Source-Domain-Adaptation"><span class="nav-text">5.3.2 Multi-Source Domain Adaptation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Effect-of-Category-Number"><span class="nav-text">Effect of Category Number</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Conclusion"><span class="nav-text">6. Conclusion</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jingge</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+<script type="text/javascript">
+    $('.post-body').bind('copy', function() {
+        alert('本博客内容欢迎分享（将本博客的原文地址分享到其它网站），允许部分摘录并在醒目位置附上原文链接，未经许可禁止任何形式的全文转载。');
+    });
+</script>
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
