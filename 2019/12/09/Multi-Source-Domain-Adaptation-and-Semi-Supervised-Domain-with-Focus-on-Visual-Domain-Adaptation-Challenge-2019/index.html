@@ -135,7 +135,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209224356563.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209224636475.png">
 <meta property="article:published_time" content="2019-12-09T08:47:26.000Z">
-<meta property="article:modified_time" content="2019-12-15T07:57:01.941Z">
+<meta property="article:modified_time" content="2019-12-15T15:43:19.169Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="Paper Reading">
 <meta property="article:tag" content="Domain Adaptation">
@@ -362,7 +362,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-15T15:57:01+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-15T23:43:19+08:00">
                 2019-12-15
               </time>
             
@@ -470,15 +470,13 @@
 </ul>
 </li>
 <li><p>Multi-Source任务要求：</p>
-</li>
-</ul>
 <p>要在下面两个不同的设置下，分别训练两个有相同方法（超参数）的模型：</p>
 <p>模型1：在有标签的 sketch_train/real_train/quickdraw_train/infograph_train和<strong>没有标签</strong>的clipart_train上训练，在没有标签的clipart_test测试。</p>
 <p>模型2：在有标签的 sketch_train/real_train/quickdraw_train/infograph_train和<strong>没有标签</strong>的 painting_train上训练，在没有标签的painting_test测试。</p>
-<ul>
+</li>
 <li><p>半监督domain adaptation任务要求：</p>
-<p>source有标签，target有部分标签。可以通过伪标签方式给没有标签的target样本以标签。</p>
-<p>注意这个track不是multi-source问题！</p>
+<p>  source有标签，target有部分标签。可以通过伪标签方式给没有标签的target样本以标签。</p>
+<p>  注意这个track不是multi-source问题！</p>
 <ul>
 <li>validation<ul>
 <li>Source Domain: Real</li>
@@ -497,8 +495,7 @@
 <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>本文同时参加了VisDA-2019的multi-source domain adaptation和semi-supervised domain adaptation 两个板块的比赛。</p>
 <p><strong>Multi-source domain adaptation：</strong></p>
 <ul>
-<li>pixel-level and feature-level adaptation即从像素和特征适配角度都考虑了multi-source问题。</li>
-<li>directly hallucinating labeled target sample via <strong>CycleGAN</strong> and learning domain-invariant feature representations through self-learning即通过CycleGAN网络直接学习预测标签了的target样本，通过自学习domain-invariant的特征表达。</li>
+<li>我们探究了pixel-level的多源域适配问题，也探究了feature-level的adaptation问题。也就是说，通过CycleGAN网络直接幻想我们有（生成）一些有标签的target样本，并通过自学习学习域不变的特征表示。</li>
 <li>fuse features from different backbones即将不同source的特征融合。</li>
 <li>code：<a href="https://github.com/Panda-Peter/visda2019-multisource" target="_blank" rel="noopener">https://github.com/Panda-Peter/visda2019-multisource</a></li>
 </ul>
@@ -515,7 +512,7 @@
 <p><strong>multi-source domain adaptation</strong>[10]</p>
 <p>文章[10]提出多源DA问题，即从multi-source到单个无标签target，也是unsupervised的。但是本文是semi-supervised，即target有部分标签。</p>
 <h1 id="2-Multi-Source-Domain-Adaptation"><a href="#2-Multi-Source-Domain-Adaptation" class="headerlink" title="2. Multi-Source Domain Adaptation"></a>2. Multi-Source Domain Adaptation</h1><p><strong>main idea</strong> </p>
-<p>使用CycleGAN进行unsupervised（非监督：target没有标签） pixel-level的adaptation：通过CycleGAN的generator，将source域（sketch或real）中的每张<strong>未标签</strong>的训练图片，翻译成target域（clipart或painting）的对应的图像（称为sketch星，real星​域，它们就相当于比赛模型要求中所说的，clipart和painting域的未标签的数据？？？？？？？）。如图1所示就是从source域（sketch和real）经过pixel-level的适配到target域（clipart和painting）的示例图像。</p>
+<p>使用CycleGAN（文章18：imgage-to-image translation将一种类型的图像translate成另一种，在没有成对样本输入的条件下完成，即unsupervised）进行unsupervised（非监督：target没有标签） pixel-level的adaptation：通过CycleGAN的generator，将source域（sketch或real）中的每张<strong>未标签</strong>的训练图片，翻译成target域（clipart或painting）的对应的图像（称为sketch星，real星​域，它们就相当于比赛模型要求中所说的，clipart和painting域的未标签的数据？？？？？？？）。如图1所示就是从source域（sketch和real）经过pixel-level的适配到target域（clipart和painting）的示例图像。</p>
 <ul>
 <li><p>source domains : sketch/real</p>
 </li>
