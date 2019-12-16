@@ -118,12 +118,12 @@
 
 
 
-<meta name="description" content="原文： http:&#x2F;&#x2F;csr.bu.edu&#x2F;ftp&#x2F;visda&#x2F;2019&#x2F;tech_reports&#x2F;multi-source-1st.pdf    比赛github： https:&#x2F;&#x2F;github.com&#x2F;VisionLearningGroup&#x2F;visda-2019-public   multi-source数据集共6个域：  Clipart (clp), a collection of clip">
+<meta name="description" content="原文： http:&#x2F;&#x2F;csr.bu.edu&#x2F;ftp&#x2F;visda&#x2F;2019&#x2F;tech_reports&#x2F;multi-source-1st.pdf    比赛详细介绍： https:&#x2F;&#x2F;github.com&#x2F;VisionLearningGroup&#x2F;visda-2019-public   multi-source数据集共6个域：  Clipart (clp), a collection of clipar">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" Multi-Source Domain Adaptation and Semi-Supervised Domain with Focus on Visual Domain Adaptation Challenge 2019">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;index.html">
 <meta property="og:site_name" content="Jingge&#39;s blog">
-<meta property="og:description" content="原文： http:&#x2F;&#x2F;csr.bu.edu&#x2F;ftp&#x2F;visda&#x2F;2019&#x2F;tech_reports&#x2F;multi-source-1st.pdf    比赛github： https:&#x2F;&#x2F;github.com&#x2F;VisionLearningGroup&#x2F;visda-2019-public   multi-source数据集共6个域：  Clipart (clp), a collection of clip">
+<meta property="og:description" content="原文： http:&#x2F;&#x2F;csr.bu.edu&#x2F;ftp&#x2F;visda&#x2F;2019&#x2F;tech_reports&#x2F;multi-source-1st.pdf    比赛详细介绍： https:&#x2F;&#x2F;github.com&#x2F;VisionLearningGroup&#x2F;visda-2019-public   multi-source数据集共6个域：  Clipart (clp), a collection of clipar">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;1.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209203956570.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209205719604.png">
@@ -135,7 +135,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209224356563.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;Multi-Source-Domain-Adaptation-and-Semi-Supervised-Domain-with-Focus-on-Visual-Domain-Adaptation-Challenge-2019&#x2F;image-20191209224636475.png">
 <meta property="article:published_time" content="2019-12-09T08:47:26.000Z">
-<meta property="article:modified_time" content="2019-12-15T15:43:19.169Z">
+<meta property="article:modified_time" content="2019-12-16T01:36:11.021Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="Paper Reading">
 <meta property="article:tag" content="Domain Adaptation">
@@ -362,8 +362,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-15T23:43:19+08:00">
-                2019-12-15
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-16T09:36:11+08:00">
+                2019-12-16
               </time>
             
           </span>
@@ -457,7 +457,7 @@
         <p>原文： <a href="http://csr.bu.edu/ftp/visda/2019/tech_reports/multi-source-1st.pdf" target="_blank" rel="noopener">http://csr.bu.edu/ftp/visda/2019/tech_reports/multi-source-1st.pdf</a> </p>
 <blockquote>
 <ul>
-<li><p>比赛github： <a href="https://github.com/VisionLearningGroup/visda-2019-public" target="_blank" rel="noopener">https://github.com/VisionLearningGroup/visda-2019-public</a> </p>
+<li><p>比赛详细介绍： <a href="https://github.com/VisionLearningGroup/visda-2019-public" target="_blank" rel="noopener">https://github.com/VisionLearningGroup/visda-2019-public</a> </p>
 </li>
 <li><p>multi-source数据集共6个域：</p>
 <ul>
@@ -473,20 +473,19 @@
 <p>要在下面两个不同的设置下，分别训练两个有相同方法（超参数）的模型：</p>
 <p>模型1：在有标签的 sketch_train/real_train/quickdraw_train/infograph_train和<strong>没有标签</strong>的clipart_train上训练，在没有标签的clipart_test测试。</p>
 <p>模型2：在有标签的 sketch_train/real_train/quickdraw_train/infograph_train和<strong>没有标签</strong>的 painting_train上训练，在没有标签的painting_test测试。</p>
+<p>最终的比赛排名根据两个模型的正确预测数目的和来确定。（后文又说，取每一个类别的分类accuracy，然后取平均）但是有两个排行榜，一个是adapted models的，即同时利用source和target数据的，用来确定比赛最后排名；另外一个是source-only models的，即没有用adaptation思想，只是在source上训练的模型，直接用来在target做预测，这个结果可以用来估计提出的adaptation模型相对它的source-only模型有多大提升。</p>
 </li>
 <li><p>半监督domain adaptation任务要求：</p>
-<p>  source有标签，target有部分标签。可以通过伪标签方式给没有标签的target样本以标签。</p>
-<p>  注意这个track不是multi-source问题！</p>
+<p>source有标签，target有部分标签。可以通过伪标签方式给没有标签的target样本以标签。</p>
+<p> 注意这个competition track不是multi-source问题！只有一个source！</p>
 <ul>
-<li>validation<ul>
-<li>Source Domain: Real</li>
-<li>Target Domain: Sketch</li>
-</ul>
+<li><p>validation</p>
+<p>Source Domain: Real</p>
+<p>Target Domain: Sketch</p>
 </li>
-<li>test：针对不同的target数据，需要训练两个不同的模型，分别给出两个target上的预测结果<ul>
-<li>Source Domain: Real</li>
-<li>Target Domains: Clipart, Painting</li>
-</ul>
+<li><p>test：针对不同的target数据，需要训练两个不同的模型，分别给出两个target上的预测结果，注意除了对应source和target数据集，不允许使用其他数据集。</p>
+<p>Source Domain: Real</p>
+<p>Target Domains: Clipart或Painting</p>
 </li>
 </ul>
 </li>
@@ -511,8 +510,7 @@
 <p>利用source标签数据和大量target未标签数据生成target模型。即target完全没有标签。</p>
 <p><strong>multi-source domain adaptation</strong>[10]</p>
 <p>文章[10]提出多源DA问题，即从multi-source到单个无标签target，也是unsupervised的。但是本文是semi-supervised，即target有部分标签。</p>
-<h1 id="2-Multi-Source-Domain-Adaptation"><a href="#2-Multi-Source-Domain-Adaptation" class="headerlink" title="2. Multi-Source Domain Adaptation"></a>2. Multi-Source Domain Adaptation</h1><p><strong>main idea</strong> </p>
-<p>使用CycleGAN（文章18：imgage-to-image translation将一种类型的图像translate成另一种，在没有成对样本输入的条件下完成，即unsupervised）进行unsupervised（非监督：target没有标签） pixel-level的adaptation：通过CycleGAN的generator，将source域（sketch或real）中的每张<strong>未标签</strong>的训练图片，翻译成target域（clipart或painting）的对应的图像（称为sketch星，real星​域，它们就相当于比赛模型要求中所说的，clipart和painting域的未标签的数据？？？？？？？）。如图1所示就是从source域（sketch和real）经过pixel-level的适配到target域（clipart和painting）的示例图像。</p>
+<h1 id="2-Multi-Source-Domain-Adaptation"><a href="#2-Multi-Source-Domain-Adaptation" class="headerlink" title="2. Multi-Source Domain Adaptation"></a>2. Multi-Source Domain Adaptation</h1><h2 id="2-1-main-idea"><a href="#2-1-main-idea" class="headerlink" title="2.1 main idea"></a>2.1 main idea</h2><p>我们的灵感来自文章18，它的核心工作是在没有成对样本输入的条件下，完成imgage-to-image translation即将一种类型的图像翻译生成另一种类型的图像。我们使用文章18提出的CycleGAN网络进行unsupervised（无监督：target没有标签） pixel-level的adaptation：通过CycleGAN的generator，将source域（sketch或real）中的每张<strong>未标签</strong>的训练图片，翻译成target域（clipart或painting）的对应的图像（称为sketch星，real星域，它们就相当于比赛模型要求中所说的，clipart和painting域的未标签的数据？？？？？？？）。如图1所示就是从source域（sketch和real）经过pixel-level的适配到target域（clipart和painting）的示例图像。</p>
 <ul>
 <li><p>source domains : sketch/real</p>
 </li>
@@ -525,9 +523,9 @@
 <p>进一步，我们的方法是一种混合两个adaptation模型的混合系统，来对这些初始化过后的伪标签作进一步的优化。</p>
 <p>我们交替使用两种适应模型，四次，以增强伪标签。</p>
 <p>两种adaptation模型分别如下：</p>
-<h2 id="2-1-End-to-End-Adaptation-Module-EEA"><a href="#2-1-End-to-End-Adaptation-Module-EEA" class="headerlink" title="2.1 End-to-End Adaptation Module (EEA)"></a>2.1 End-to-End Adaptation Module (EEA)</h2><p><img src="image-20191209203956570.png" alt=""></p>
+<h2 id="2-2-End-to-End-Adaptation-Module-EEA"><a href="#2-2-End-to-End-Adaptation-Module-EEA" class="headerlink" title="2.2 End-to-End Adaptation Module (EEA)"></a>2.2 End-to-End Adaptation Module (EEA)</h2><p><img src="image-20191209203956570.png" alt=""></p>
 <p>EEA使用8个source-only训练出来的backbone模型进一步fine-tune。source和target共享参数，前面得到target的初始伪标签，与这里通过每个backbone网络得到的预测结果计算generalized cross entropy loss【17】。训练后，更新没有标签的target样本的伪标签。</p>
-<h2 id="2-2-Feature-Fusion-based-Adaptation-Module-FFA"><a href="#2-2-Feature-Fusion-based-Adaptation-Module-FFA" class="headerlink" title="2.2 Feature Fusion based Adaptation Module (FFA)"></a>2.2 Feature Fusion based Adaptation Module (FFA)</h2><p><img src="image-20191209205719604.png" alt=""></p>
+<h2 id="2-3-Feature-Fusion-based-Adaptation-Module-FFA"><a href="#2-3-Feature-Fusion-based-Adaptation-Module-FFA" class="headerlink" title="2.3 Feature Fusion based Adaptation Module (FFA)"></a>2.3 Feature Fusion based Adaptation Module (FFA)</h2><p><img src="image-20191209205719604.png" alt=""></p>
 <p>FFA通过Bilinear pooling融合每两个backbone的特征。然后，对每个input source/target样本的每个融合的特征，都从头训练分类器。每个分类器有有标签source样本的cross entropy loss，和无标签target样本的generalized cross entropy loss。</p>
 <p>训练出来一共有7+6+5+4+3+2+1=28个融合特征的分类器，和8个对应每个backbone单特征的分类器。取36个分类器的平均值，更新没有标签的target样本的伪标签。</p>
 <p>在推理（inference）阶段，取最后一次的FFA模型的36个分类器的平均输出作为最后预测结果。</p>
@@ -770,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Multi-Source-Domain-Adaptation"><span class="nav-text">2. Multi-Source Domain Adaptation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-End-to-End-Adaptation-Module-EEA"><span class="nav-text">2.1 End-to-End Adaptation Module (EEA)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Feature-Fusion-based-Adaptation-Module-FFA"><span class="nav-text">2.2 Feature Fusion based Adaptation Module (FFA)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Semi-Supervised-Domain-Adaptation"><span class="nav-text">3. Semi-Supervised Domain Adaptation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experiments"><span class="nav-text">4. Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Multi-Source-Domain-Adaptation"><span class="nav-text">4.1 Multi-Source Domain Adaptation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Effect-of-pixel-level-adaptation-in-source-only-model"><span class="nav-text">Effect of pixel-level adaptation in source-only model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-Effect-of-End-to-End-Adaptation-EEA"><span class="nav-text">4.1.1 Effect of End-to-End Adaptation (EEA)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-Effect-of-Feature-Fusion-based-Adaptation-FFA"><span class="nav-text">4.1.2 Effect of Feature Fusion based Adaptation (FFA)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-Performance-on-Testing-Set"><span class="nav-text">4.1.3 Performance on Testing Set</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Semi-Supervised-Domain-Adaptation"><span class="nav-text">4.2 Semi-Supervised Domain Adaptation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Multi-Source-Domain-Adaptation"><span class="nav-text">2. Multi-Source Domain Adaptation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-main-idea"><span class="nav-text">2.1 main idea</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-End-to-End-Adaptation-Module-EEA"><span class="nav-text">2.2 End-to-End Adaptation Module (EEA)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Feature-Fusion-based-Adaptation-Module-FFA"><span class="nav-text">2.3 Feature Fusion based Adaptation Module (FFA)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Semi-Supervised-Domain-Adaptation"><span class="nav-text">3. Semi-Supervised Domain Adaptation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Experiments"><span class="nav-text">4. Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Multi-Source-Domain-Adaptation"><span class="nav-text">4.1 Multi-Source Domain Adaptation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Effect-of-pixel-level-adaptation-in-source-only-model"><span class="nav-text">Effect of pixel-level adaptation in source-only model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-Effect-of-End-to-End-Adaptation-EEA"><span class="nav-text">4.1.1 Effect of End-to-End Adaptation (EEA)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-Effect-of-Feature-Fusion-based-Adaptation-FFA"><span class="nav-text">4.1.2 Effect of Feature Fusion based Adaptation (FFA)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-Performance-on-Testing-Set"><span class="nav-text">4.1.3 Performance on Testing Set</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Semi-Supervised-Domain-Adaptation"><span class="nav-text">4.2 Semi-Supervised Domain Adaptation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
