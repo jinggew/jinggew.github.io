@@ -126,7 +126,7 @@
 <meta property="og:description" content="1 配置1.1 deploy免输入密码 修改_config.yml中deploy的参数，部署仓库以SSH的方式发布不需输入密码，反之如果以HTTPS的方式发布则需要密码。  1# Deployment2## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html3deploy:4  type: git5  repo: git@g">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;hexo&#x2F;image-20191210162451322.png">
 <meta property="article:published_time" content="2019-12-09T09:03:08.000Z">
-<meta property="article:modified_time" content="2019-12-29T05:41:35.847Z">
+<meta property="article:modified_time" content="2019-12-29T05:45:08.982Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="工具">
 <meta property="article:tag" content="hexo">
@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-29T13:41:35+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-29T13:45:08+08:00">
                 2019-12-29
               </time>
             
@@ -475,15 +475,12 @@
 </li>
 </ul>
 <h2 id="2-2-开头代码模板"><a href="#2-2-开头代码模板" class="headerlink" title="2.2 开头代码模板"></a>2.2 开头代码模板</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">title: hexo</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">date: <span class="number">2019</span><span class="number">-12</span><span class="number">-09</span> <span class="number">17</span>:<span class="number">03</span>:<span class="number">08</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">tags:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">- 工具</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">- hexo</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">categories: others</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">typora-root-url: hexo</span></pre></td></tr></table></figure>
-<h2 id="2-3-修改文章标题"><a href="#2-3-修改文章标题" class="headerlink" title="2.3 修改文章标题"></a>2.3 修改文章标题</h2><ul>
-<li><p>如果需要改文章标题，注意一下几点避免404：</p>
+<h2 id="2-3-修改文章标题"><a href="#2-3-修改文章标题" class="headerlink" title="2.3 修改文章标题"></a>2.3 修改文章标题</h2><p>如果需要改文章标题，注意一下几点避免404：</p>
 <p>① 修改md文件内开头标题<code>title: file name</code></p>
 <p>② 修改md文件内开头<code>typora-root-url: file-name</code></p>
 <p>③ 修改md文件名<code>file-name.md</code></p>
 <p>④ 修改对应的图片文件夹的名字<code>file-name</code></p>
 <p>注意md文件和图片文件夹，在hexo新建全英文名的文件的时候，都会自动生成为有<code>-</code>间隔的形式。所以在typora引用图片路径url的时候，也要加上。</p>
-</li>
-</ul>
 
       
     </div>
