@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jingge&#39;s blog">
 <meta property="og:description" content="12&#x2F;16&#x2F;下午  Adapt&#x2F;lib&#x2F;config.py Adapt&#x2F;models&#x2F;dpn.py删除最前面from import前面的所有注释 Adapt&#x2F;experiments&#x2F;clipart&#x2F;efficientnet_b4&#x2F;config.py修改75行从true到100 可以跑，显示RuntimeError: cuda runtime error (38) : no CUDA-capable">
 <meta property="article:published_time" content="2019-12-16T09:00:29.000Z">
-<meta property="article:modified_time" content="2019-12-16T09:18:55.000Z">
+<meta property="article:modified_time" content="2019-12-28T10:09:58.116Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="调试纪录">
 <meta name="twitter:card" content="summary">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-16T17:18:55+08:00">
-                2019-12-16
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-28T18:09:58+08:00">
+                2019-12-28
               </time>
             
           </span>
@@ -442,7 +442,366 @@
 <ul>
 <li><code>Adapt/lib/config.py</code></li>
 <li><code>Adapt/models/dpn.py</code>删除最前面from import前面的所有注释</li>
-<li><code>Adapt/experiments/clipart/efficientnet_b4/config.py</code>修改75行从true到100 可以跑，显示RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at问题，已经改回true</li>
+<li><p><code>Adapt/experiments/clipart/efficientnet_b4/config.py</code>修改75行从true到100 可以跑，显示RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at问题，已经改回true</p>
+<p><strong>12.26</strong></p>
+</li>
+<li><p>rice dataset四类米饭：</p>
+<p>fried rice 炒饭</p>
+<p>jollof (西非) 辣椒炖(鱼)肉饭;</p>
+<p>plain rice 纯白米饭（没有其他配菜花样）</p>
+<p>waakye 豆煮饭 </p>
+</li>
+<li><p>256类：</p>
+<p>身份证名<br>1饭<br>2条鳗鱼饭<br>3抓饭<br>4个鸡饭蛋<br>5猪排饭<br>6牛肉咖喱<br>7个寿司<br>8鸡饭<br>9炒饭<br>10天妇罗碗<br>11石锅拌饭<br>12吐司<br>13牛角包<br>14卷面包<br>15葡萄干面包<br>16筹码屁股<br>17个汉堡<br>18个披萨<br>19个三明治<br>20乌冬面<br>21天妇罗乌冬面<br>22荞麦面<br>23拉面<br>24牛肉面<br>25张力面<br>26炒面<br>27意大利面<br>28日式煎饼<br>29章鱼烧<br>30焗<br>31炒蔬菜<br>32炸丸子<br>33烤茄子<br>34菠菜炒<br>35蔬菜天妇罗<br>36味o汤<br>37罐<br>38香肠<br>39关东煮<br>40个煎蛋卷<br>41甘莫达基<br>42角子<br>43炖<br>44照烧鱼<br>45条炸鱼<br>46烤三文鱼<br>47三文鱼三明治<br>48生鱼片<br>49烤太平洋秋刀鱼<br>50个寿喜烧<br>51糖醋猪肉<br>52条轻烤鱼<br>53蒸鸡蛋火锅<br>54天妇罗<br>55炸鸡<br>56牛lo<br>57 Nanbanzuke<br>58个水煮鱼<br>59牛肉加土豆<br>60磅牛排<br>61牛排<br>62条鱼干<br>63姜猪肉炒香<br>64辣辣椒豆腐<br>65烤鸡肉串<br>66卷心菜卷<br>67煎蛋卷<br>68个鸡蛋面朝上<br>69纳豆<br>70冷豆腐<br>71蛋卷<br>72冷面<br>73牛肉和辣椒炒<br>74 pork肉<br>75煮鸡肉和蔬菜<br>76刺身碗<br>77个寿司碗<br>78鱼形煎饼配豆酱<br>79虾带冷源<br>80只烤鸡<br>81肉饺子<br>82煎蛋卷<br>83咖喱炸肉排<br>84意大利面条肉酱<br>85炸虾<br>86土豆沙拉<br>87绿色沙拉<br>88通心粉沙拉<br>89日本豆腐和蔬菜杂烩<br>90猪肉味o汤<br>91汤<br>92牛肉碗<br>93 kinpira风格的牛<br>94饭团<br>95披萨吐司<br>96条蘸面<br>97热狗<br>98炸薯条<br>99米<br>100 goya chanpuru<br>101绿咖喱<br>102冲绳荞麦面<br>103芒果布丁<br>104杏仁果冻<br>105 ji<br>106达克·加尔比<br>107干咖喱<br>108卡玛米士<br>109米粉<br>110西班牙海鲜饭<br>111潭门<br>112 kushikatu<br>113黄咖喱<br>114煎饼<br>115斜纹棉布<br>116绉<br>117提拉米苏<br>118松饼<br>119稀有芝士蛋糕<br>120脆饼<br>121杂碎<br>122两次煮熟的猪肉<br>123蘑菇烩饭<br>124 samul<br>125 Zoni<br>126法式吐司<br>127白色细面<br>128蔬菜通心粉汤<br>129 pot au feu<br>130块鸡块<br>131名<br>132法式面包<br>133米粥<br>134烤鳗鱼碗<br>135清汤<br>第136章<br>137年<br>138 inarizushi<br>139猪里脊肉<br>140猪排<br>141鸡排<br>142火腿肉饼<br>143碎肉排<br>144薄片生马肉<br>145百吉饼<br>146烤饼<br>147玉米饼<br>148玉米饼<br>149玉米片<br>150块面包<br>151炒蛋<br>152焗饭<br>153烤宽面条<br>154凯撒沙拉<br>155燕麦片<br>156炸猪肉饺子汤<br>157年<br>158松饼<br>159爆米花<br>160奶油泡芙<br>161甜甜圈<br>162苹果派<br>163冻糕<br>164炒猪肉<br>165羊肉串<br>166道菜，包括炸土豆，茄子和青椒<br>167烤鸭<br>168火锅<br>169五花肉<br>170小笼包<br>171月饼<br>172蛋ust<br>173牛肉面汤<br>174猪排<br>175碎猪肉饭<br>176鱼丸汤<br>177牡蛎煎蛋<br>178糯米<br>179特里尼布丁<br>180臭豆腐<br>181柠檬无花果冻<br>182 so<br>183酸虾汤<br>184泰国木瓜沙拉<br>185块切成薄片的海南鸡配腌制米饭<br>186酸辣鱼和蔬菜炖肉<br>187炒杂菜<br>188蚝油牛肉<br>189猪肉沙爹<br>190辣鸡丁沙拉<br>191咖喱面<br>192猪肉粘面<br>193柠檬猪肉<br>194炖猪腿<br>195炭烧猪脖子<br>196炒贻贝煎饼<br>197炸鸡翅<br>198红烧叉烧<br>199鸭烧饭<br>200米脆皮猪肉<br>201云吞汤<br>202咖喱鸡饭配椰子<br>203香酥面<br>204鸡黄咖喱鸡蛋面<br>205椰奶汤<br>pho 206<br>207顺化牛肉米粉汤<br>208条蜗牛细面条<br>209炸春卷<br>210蒸米饭<br>211虾肉饼<br>212猪肉丸子<br>213椰奶味薄饼配虾和牛肉<br>214小蒸咸米饼<br>215汤圆<br>216疯子<br>217豪皮亚<br>218马拉萨达<br>劳劳219<br>220垃圾邮件musubi<br>221牛尾汤<br>222阿斗<br>223伦比<br>224布朗尼<br>225油条<br>226什锦饭<br>227炒饭<br>228 ayam goreng<br>229 ayam bakar<br>230 bubur ayam<br>古来231<br>232叻沙<br>233 mie ayam<br>234 mie goreng<br>235纳西坎普尔<br>236椰浆饭<br>237椰浆饭<br>238 ba鱼<br>239卡亚吐司<br>240白骨茶<br>241咖喱泡芙<br>242炒面<br>243江面243<br>244宫保鸡丁<br>245 ll<br>246茄子茄子<br>247三杯鸡<br>248豆腐家庭风格<br>249椒盐虾仁<br>250烤三文鱼<br>251纳帕白菜红烧肉丸<br>252冬瓜汤<br>253蒸排骨<br>254中国南瓜派<br>255八宝饭<br>256酸辣汤</p>
+</li>
+<li><p>101 类</p>
+<p>苹果派<br>小排骨<br>巴卡拉<br>牛肉生牛肉片<br>art牛肉<br>甜菜沙拉<br>贝尼格斯<br>拌饭<br>面包布丁<br>早餐卷饼<br>布鲁斯凯塔<br>凯撒沙拉<br>香炸奶酪卷<br>卡普雷塞沙拉<br>胡萝卜蛋糕<br>酸橘汁腌鱼<br>乳酪蛋糕<br>奶酪盘<br>咖喱鸡<br>鸡肉玉米饼<br>鸡翅<br>巧克力蛋糕<br>巧克力慕斯<br>丘罗斯<br>蛤蜊杂烩<br>俱乐部三明治<br>蟹饼<br>焦糖布丁<br>法式夫人<br>纸杯蛋糕<br>芥末蛋<br>甜甜圈<br>水饺<br>毛豆<br>本尼迪克特蛋<br>田螺<br>沙拉三明治<br>烤里脊肉片<br>鱼和薯条<br>鹅肝<br>炸薯条<br>法式洋葱汤<br>法式吐司<br>炸鱿鱼<br>炒饭<br>冰冻酸奶<br>蒜蓉面包<br>汤团<br>希腊式沙拉<br>烤奶酪三明治<br>烤三文鱼<br>鳄梨<br>饺子<br>汉堡包<br>酸辣汤<br>热狗<br>墨西哥煎蛋<br>鹰嘴豆泥<br>冰淇淋<br>烤宽面条<br>龙虾浓汤<br>龙虾卷三明治<br>通心粉和奶酪<br>马卡龙<br>味噌汤<br>青口贝<br>玉米片<br>煎蛋卷<br>洋葱圈<br>生蚝<br>泰式炒河粉<br>西班牙海鲜饭<br>薄煎饼<br>潘纳陶砖<br>北京烤鸭<br>ho<br>比萨<br>猪排<br>普丁<br>牛排<br>拉猪肉三明治<br>拉面<br>馄饨<br>红色天鹅绒蛋糕<br>烩饭<br>萨摩萨<br>生鱼片<br>扇贝<br>海藻沙拉<br>虾和粉打窝沙食<br>肉酱意粉<br>意粉培根蛋面<br>春卷<br>牛扒<br>草莓脆饼<br>寿司<br>玉米饼<br>章鱼烧<br>提拉米苏<br>art金枪鱼<br>威化饼</p>
+</li>
+<li><p>[x] rice 从头训练 32064  因为把vgg19不用预训练参数的条件，改为了预训练的条件，pretrained=true, 和101,256一样</p>
+</li>
+</ul>
+<ul>
+<li><p>[x] 101训练测试，保存trained pwf模型文件， 训练测试划分：</p>
+<p><code>train_data,test_data=torch.utils.data.random_split(dataset,(100000,1000))</code></p>
+</li>
+</ul>
+<ul>
+<li>[x] 256训练测试，保存trained pwf模型文件， 训练测试划分：</li>
+</ul>
+<p><code>train_data,test_data=torch.utils.data.random_split(dataset,(30000,1395))</code></p>
+<ul>
+<li>[x] 101到rice应该保持冻结特征提取部分的参数 （111行） 正在训练32065 </li>
+</ul>
+<p># wjg 12.26 保持和multi一致，从101拿过来的pwf文件中的特征提取部分的参数不参与训练，冻结</p>
+<p>for param in model.features:</p>
+<p>  param.requires_grad = False # wjg 12.26 do not require gradient descent for feature extraction parameters.</p>
+<ul>
+<li>[x] 256到rice应该保持冻结特征提取部分的参数 （111行） 正在训练32066</li>
+</ul>
+<ul>
+<li><p>[ ] 101去掉rice相关类别训练</p>
+</li>
+<li><p>[ ] 256 去掉rice相关类别训练</p>
+</li>
+<li>[ ] 101选4类没有rice的迁移到ricedataset 4×1000</li>
+<li>[ ] 256选4类没有rice的迁移到ricedataset 621+131+116+122=990 - 4 = 986 （因为每个里面有一个坐标文件！）</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">模型</th>
+<th style="text-align:center">test acc</th>
+<th style="text-align:center">提交任务slurm编号</th>
+<th>备注</th>
+<th>问题</th>
+<th>对应py文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">rice-scratch</td>
+<td style="text-align:center">82%</td>
+<td style="text-align:center">32064</td>
+<td>改为使用vgg19 pretrained参数epoch=30</td>
+<td></td>
+<td>rice-scratch.py</td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scratch</td>
+<td style="text-align:center">83.7500%</td>
+<td style="text-align:center">32210</td>
+<td>epoch=30，网络4096-512，学习率定0.001</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32233</td>
+<td>epoch=1，网络4096-512，学习率定0.001改</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">101-to-rice</td>
+<td style="text-align:center">85 %</td>
+<td style="text-align:center">32065</td>
+<td>改为冻结特征提取参数</td>
+<td></td>
+<td>101-to-rice.py</td>
+</tr>
+<tr>
+<td style="text-align:center">256-to-rice</td>
+<td style="text-align:center">86 %</td>
+<td style="text-align:center">32066</td>
+<td>改为冻结特征提取参数</td>
+<td></td>
+<td>256-to-rice.py</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-101</td>
+<td style="text-align:center">87%</td>
+<td style="text-align:center">32067</td>
+<td>训练101类中的4类</td>
+<td>有问题！没有改类别是4</td>
+<td>4-in-101.py</td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-101-to-rice</td>
+<td style="text-align:center">81.2500</td>
+<td style="text-align:center">32068</td>
+<td>101中选前4类，没有rice，模型迁移到rice</td>
+<td>改成显示4为小数准确率，有问题！预训练没有改类别是4！</td>
+<td>4-in-101-to-rice.py</td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-256</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32069</td>
+<td></td>
+<td>类别4</td>
+<td>4-in-256.py</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>date：1228</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32084</td>
+<td>epoch=30 原来3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">256</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32085</td>
+<td>epoch=30 原来3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-101</td>
+<td style="text-align:center">88.7500%</td>
+<td style="text-align:center">32092</td>
+<td>epoch=30</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-256</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32097</td>
+<td>epoch=30</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">88.7500%</td>
+<td style="text-align:center">32099</td>
+<td>改epoch30为10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">83.7500%</td>
+<td style="text-align:center">32235</td>
+<td>epoch=30 网络4096-512，学习率0.001改</td>
+<td>每5个batch缩减0.1，10后面训不动</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">87.5000%</td>
+<td style="text-align:center">32236</td>
+<td>epoch=30 网络4096-512，学习率0.001改,dropout=0.6</td>
+<td>每5个batch缩减0.1，10后面训不动</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">81.2500%</td>
+<td style="text-align:center">32243</td>
+<td>加入weight decay，0.6，scheduler</td>
+<td>动态调整Lr，后面仍然训不动</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">85.0000%</td>
+<td style="text-align:center">32247</td>
+<td>改dropout=0.7，去掉weight decay，scheduler下限0.0000001</td>
+<td>后面仍然训不动</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32289</td>
+<td>改dropout=0.7，weight decay0.0005，去掉scheduler</td>
+<td>后面可以训动，但是准确率比训练集还是差很多。</td>
+<td>可视化版本不匹配，跑不出来</td>
+</tr>
+<tr>
+<td style="text-align:center">rice-scrach</td>
+<td style="text-align:center">87.5000%</td>
+<td style="text-align:center">32312</td>
+<td>还原vgg19的4096维度结构，调dropout=0.7，weight decay=0.0005，scheduler，epoch=60</td>
+<td>20轮就88.7500%，21轮起后面降到87.5</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>修改epoch后</strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">32148</td>
+<td>epoch=10</td>
+<td>没有得到结果，李嘉荣在跑</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">256</td>
+<td style="text-align:center">33.9068%</td>
+<td style="text-align:center">32149</td>
+<td>epoch=3   !!!!!!!!!!!!!!!!!!</td>
+<td>10轮timeout了，所以改回3轮，只训练3轮准确率很低</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">101</td>
+<td style="text-align:center">43.8000%</td>
+<td style="text-align:center">32177</td>
+<td>epoch=3   !!!!!!!!!!!!!!!!!!</td>
+<td>结果应该也不高，2030左右</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-101</td>
+<td style="text-align:center">85.5000%</td>
+<td style="text-align:center">32108</td>
+<td>epoch=10</td>
+<td>101取前4类，没有米饭类</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-256</td>
+<td style="text-align:center">94.0860%</td>
+<td style="text-align:center">32110</td>
+<td>epoch=10</td>
+<td>256取前4类，都是米饭相关类</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-101-to-rice</td>
+<td style="text-align:center">81.2500%</td>
+<td style="text-align:center">32150</td>
+<td>epoch=10</td>
+<td>101上4类finetune到rice</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4-in-256-to-rice</td>
+<td style="text-align:center">78.7500%</td>
+<td style="text-align:center">32151</td>
+<td>epoch=10</td>
+<td>256上4类finetune到rice</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">4in101+4in256-to-rice</td>
+<td style="text-align:center">86.2500%</td>
+<td style="text-align:center">32156</td>
+<td>epoch=10</td>
+<td>101上4类，256上4类，两个source，finetune到rice</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>12.27</strong></p>
+<ul>
+<li><p>修改所有最后输出测试集上的准确率</p>
+</li>
+<li><p>修改所有准确率相关参数为4位小数输出</p>
+</li>
+<li><p>修改所有epoch数为30！ 101和256的原始训练  </p>
+<ul>
+<li>训练时间太长，改成10次！！！！！！！！！！！！！！</li>
+</ul>
+</li>
+<li><p>修改相关注释提示输出</p>
+</li>
 </ul>
 
       
@@ -573,7 +932,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -584,7 +943,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -595,7 +954,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

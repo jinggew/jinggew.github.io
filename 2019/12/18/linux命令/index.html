@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jingge&#39;s blog">
 <meta property="og:description" content="文件操作 复制文件夹 1cp -r &#x2F;source_direction &#x2F;target_direction  解压.gz文件 1tar -zxvf filename.tar.gz2# tar是打包，不压缩3# gz是用gzip把打包成.tar的文件压缩  拆包.tar文件 1tar -xvf filename.tar  打包成.tar文件 1tar -cvf tar-file-name.tar o">
 <meta property="article:published_time" content="2019-12-18T06:29:30.000Z">
-<meta property="article:modified_time" content="2019-12-19T08:56:38.633Z">
+<meta property="article:modified_time" content="2019-12-28T02:53:37.882Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-19T16:56:38+08:00">
-                2019-12-19
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-28T10:53:37+08:00">
+                2019-12-28
               </time>
             
           </span>
@@ -452,7 +452,7 @@
 <p> Make the script executable by 激活任务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">chmod a+x submit_jobs.sh</span></pre></td></tr></table></figure>
 <p> submit the job with <code>sbatch</code>  提交任务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sbatch submit_jobs.sh</span></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">sbatch submit_jobs.sh #据说不用激活，直接提交就可以</span></pre></td></tr></table></figure>
 <p> 取消任务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">scancel your_jobID</span></pre></td></tr></table></figure>
 <p>（实时）跟踪任务，输出到屏幕（如果运行结束后再tail，只会打屏最后结尾的地方）</p>
@@ -465,7 +465,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">nohup python -u filename.py &gt; filename.log 2&gt;&amp;1 &amp;</span></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="tmux使用"><a href="#tmux使用" class="headerlink" title="tmux使用"></a><code>tmux</code>使用</h1><ul>
+<h1 id="tmux使用"><a href="#tmux使用" class="headerlink" title="tmux使用"></a>tmux使用</h1><ul>
 <li><p>列出所有session</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tmux ls</span></pre></td></tr></table></figure>
 </li>
@@ -490,6 +490,22 @@
 <p>nohup command &gt; myout.file 2&gt;&amp;1 &amp;</p>
 <p>tailf myout.file</p>
 <p>2&gt;&amp;1 &gt;output.log </p>
+</li>
+</ul>
+<h1 id="VSCode快捷键"><a href="#VSCode快捷键" class="headerlink" title="VSCode快捷键"></a>VSCode快捷键</h1><ul>
+<li>F1或 <code>Ctrl+Shift+P</code> 打开命令面板</li>
+</ul>
+<h1 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h1><ul>
+<li><p>换源</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip config set <span class="keyword">global</span>.index-url https://pypi.tuna.tsinghua.edu.cn/simple  <span class="comment"># pip换源，加快下载速度</span></span></pre></td></tr></table></figure>
+</li>
+<li><p>安装tensorboard可视化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip install tensorboardX</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">pip install tensorboard</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">pip config set <span class="keyword">global</span>.index-url https://pypi.tuna.tsinghua.edu.cn/simple  <span class="comment"># pip换源，加快下载速度</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">pip install tensorflow</span></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="版本匹配问题"><a href="#版本匹配问题" class="headerlink" title="版本匹配问题"></a>版本匹配问题</h1><ul>
+<li><p>tensorboard</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tensorflow 1.14.0 + pytorch1.1.0+python 3.7.3+tensorboard 2.0.2?？？？？？</span></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -550,6 +566,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/23/vscode-insiders-ssh-terminal/" rel="prev" title="vscode insiders + ssh +terminal">
+                vscode insiders + ssh +terminal <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -626,7 +646,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -637,7 +657,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -648,7 +668,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -681,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件操作"><span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器操作"><span class="nav-text">服务器操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tmux使用"><span class="nav-text">tmux使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志"><span class="nav-text">日志</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件操作"><span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器操作"><span class="nav-text">服务器操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tmux使用"><span class="nav-text">tmux使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日志"><span class="nav-text">日志</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VSCode快捷键"><span class="nav-text">VSCode快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置相关"><span class="nav-text">配置相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#版本匹配问题"><span class="nav-text">版本匹配问题</span></a></li></ol></div>
             
 
           </div>
