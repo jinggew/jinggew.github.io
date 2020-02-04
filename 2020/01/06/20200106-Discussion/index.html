@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Jingge&#39;s blog">
 <meta property="og:description" content="2020&#x2F;1&#x2F;6与老师的讨论，关于hypothesis testing和domain adaptation。">
 <meta property="article:published_time" content="2020-01-06T05:36:59.000Z">
-<meta property="article:modified_time" content="2020-01-07T06:17:22.570Z">
+<meta property="article:modified_time" content="2020-01-11T07:00:40.525Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="Domain Adaptation">
 <meta property="article:tag" content="Hypothesis Testing">
@@ -347,8 +347,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-01-07T14:17:22+08:00">
-                2020-01-07
+              <time title="Post modified" itemprop="dateModified" datetime="2020-01-11T15:00:40+08:00">
+                2020-01-11
               </time>
             
           </span>
@@ -444,15 +444,21 @@
 
       
         <a id="more"></a> 
-<h1 id="Simple-hypothesis-testing"><a href="#Simple-hypothesis-testing" class="headerlink" title="Simple hypothesis testing"></a>Simple hypothesis testing</h1><h2 id="Problem-setup"><a href="#Problem-setup" class="headerlink" title="Problem setup"></a>Problem setup</h2><p>Simple hypothesis testing for data $x$, we hope to get to know whether its distribtution is more close to the probability $p_1$, which is our hypothesis $H_1$, or it is more close to the probability $p_2$, which is our hypothesis $H_2$.</p>
+<h1 id="Simple-hypothesis-testing"><a href="#Simple-hypothesis-testing" class="headerlink" title="Simple hypothesis testing"></a>Simple hypothesis testing</h1><h2 id="Problem-setup"><a href="#Problem-setup" class="headerlink" title="Problem setup"></a>Problem setup</h2><p>Simple hypothesis testing for data $x$, we hope to get to know whether its distribution is more close to the probability $p_1$, which is our hypothesis $H_1$, or it is more close to the probability $p_2$, which is our hypothesis $H_2$.</p>
 <script type="math/tex; mode=display">
-H_1: x \sim p_1\\
-H_2: x\sim p_2
-\notag</script><h2 id="Log-likelihood-ratio-test"><a href="#Log-likelihood-ratio-test" class="headerlink" title="Log likelihood ratio test"></a>Log likelihood ratio test</h2><p>How to decide which hypothesis is better ? We use log likelihood ratio test as following:                                                                                                                                                          </p>
+H_1: x \sim P_1\\
+H_2: x\sim P_2
+\notag</script><h2 id="Log-likelihood-ratio-test"><a href="#Log-likelihood-ratio-test" class="headerlink" title="Log likelihood ratio test"></a>Log likelihood ratio test</h2><p>How to decide which hypothesis is better ? We use log likelihood ratio test as following:          </p>
+<p>​                                                                                                                                                </p>
 <script type="math/tex; mode=display">
-log \frac{\hat p_1}{\hat p_2}</script><p>假设P1 P2分别来自unscertainty set</p>
+log \frac{P(x|H_1)}{P(x|H_2)}>\frac{P_2(C_{12}-C_{22})}{P_1(C_{21}-C_{11})}\notag \</script><p>then choose the hypothesis $H_1.$</p>
 <script type="math/tex; mode=display">
-x ~ p\in\mathcal P_1=\{p|W(p,\hat p_1)<\theta\}</script><p>w是 wassentein distance</p>
+log \frac{P(x|H_1)}{P(x|H_2)}<\frac{P_2(C_{12}-C_{22})}{P_1(C_{21}-C_{11})}\notag \</script><p>then choose the hypothesis $H_2$.</p>
+<p>i.e. we choose the corresponding distribution $P1$ or $P_2$ as the result.</p>
+<p>Log likelihood is a kind of decision rule, also called “detector”, which can discriminate between two hypotheses and achieve small error probability.</p>
+<p>假设P1 P2分别来自uncertainty set</p>
+<script type="math/tex; mode=display">
+x \sim p\in\mathcal P_1=\{p|W(p,\hat p_1)<\theta\}</script><p>w是 wassentein distance</p>
 <p>minmax问题：</p>
 <p>外部最小化最坏情况的error</p>
 <p>内部最大化worst case rick得到两个最近的分布</p>
@@ -490,7 +496,20 @@ sup \ inf</script><p>【步骤</p>
 <h1 id="用到domain-adaptation"><a href="#用到domain-adaptation" class="headerlink" title="用到domain adaptation"></a>用到domain adaptation</h1><p>$p(\phi(x)|y=0)和target的Q(\phi(x)|y=0)$是related在一个分布球里的</p>
 <p>找TCA找出$\phi$的代码</p>
 <p>文章方法的MATLAB代码</p>
-<p>在数据集上试一下</p>
+<p>在wifi数据集上试一下</p>
+<ul>
+<li>robust论文不用看理论细节</li>
+<li>找带神经网络版本的JAN？</li>
+<li>提取feature的方式，也可以</li>
+<li>wifi数据集是不是分类问题，分几类？</li>
+</ul>
+<h1 id="2020-1-11"><a href="#2020-1-11" class="headerlink" title="2020.1.11"></a>2020.1.11</h1><ul>
+<li>凸优化，书，基础知识</li>
+<li>duality对偶问题，参考TCA中用到拉格朗日对偶将constraints问题化为unconstraint问题</li>
+<li>将文中（6）式化为unconstraint用到loss中，和classification loss和domain close的loss一起BP。</li>
+<li>$P_1^<em>$ 和$P_2^</em>$是二分类问题下的最接近的分布，要是它能分出来，那更简单的也可以分出来。</li>
+<li>将二分类拓展到多分类，可能需要重新推导文中公式。</li>
+</ul>
 
       
     </div>
@@ -632,7 +651,7 @@ sup \ inf</script><p>【步骤</p>
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -643,7 +662,7 @@ sup \ inf</script><p>【步骤</p>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -654,7 +673,7 @@ sup \ inf</script><p>【步骤</p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -687,7 +706,7 @@ sup \ inf</script><p>【步骤</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Simple-hypothesis-testing"><span class="nav-text">Simple hypothesis testing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-setup"><span class="nav-text">Problem setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Log-likelihood-ratio-test"><span class="nav-text">Log likelihood ratio test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset"><span class="nav-text">dataset</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用到domain-adaptation"><span class="nav-text">用到domain adaptation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Simple-hypothesis-testing"><span class="nav-text">Simple hypothesis testing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-setup"><span class="nav-text">Problem setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Log-likelihood-ratio-test"><span class="nav-text">Log likelihood ratio test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset"><span class="nav-text">dataset</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用到domain-adaptation"><span class="nav-text">用到domain adaptation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2020-1-11"><span class="nav-text">2020.1.11</span></a></li></ol></div>
             
 
           </div>
