@@ -71,8 +71,6 @@ typora-root-url: git-notes
 
 ## 再部署静态文件
 
-```
-hexo g
-hexo d 
-```
+    hexo g
+    hexo d 
 
