@@ -126,8 +126,22 @@
 <meta property="og:description" content="从校内深度学习公开课开始，每天高效地学习与记录吧！">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311220116042.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311220706311.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235135688.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311230016827.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311230223713.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311231046782.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311231800367.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311232358886.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311233310919.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311233529287.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311234028935.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311234413017.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311234550862.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311234952926.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235338823.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235453094.png">
 <meta property="article:published_time" content="2020-03-11T12:37:29.000Z">
-<meta property="article:modified_time" content="2020-03-11T14:07:29.461Z">
+<meta property="article:modified_time" content="2020-03-11T16:03:58.628Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="Machine Learning">
 <meta property="article:tag" content="notes">
@@ -352,8 +366,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-11T22:07:29+08:00">
-                2020-03-11
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-12T00:03:58+08:00">
+                2020-03-12
               </time>
             
           </span>
@@ -446,8 +460,95 @@
       
         <p>从校内深度学习公开课开始，每天高效地学习与记录吧！</p>
 <a id="more"></a> 
-<h1 id="校内深度学习公开课"><a href="#校内深度学习公开课" class="headerlink" title="校内深度学习公开课"></a>校内深度学习公开课</h1><h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><p><img src="image-20200311220116042.png" alt=""></p>
-<p><img src="image-20200311220706311.png" alt=""></p>
+<h1 id="校内深度学习公开课"><a href="#校内深度学习公开课" class="headerlink" title="校内深度学习公开课"></a>校内深度学习公开课</h1><h2 id="1-introduction"><a href="#1-introduction" class="headerlink" title="1. introduction"></a>1. introduction</h2><p><img src="image-20200311220116042.png" style="zoom:50%;" /></p>
+<p><img src="image-20200311220706311.png" style="zoom:50%;" /></p>
+<p><img src="/image-20200311235135688.png" alt="image-20200311235135688" style="zoom:50%;" /></p>
+<p><img src="image-20200311230016827.png" style="zoom:50%;" /></p>
+<ul>
+<li>深度学习的end-to-end：representer和learner可以端到端地学习，见下图。<ul>
+<li>但是也不是说只能端到端，Hinton最早的unsupervised pre-training其实是两阶段的；</li>
+<li>一些representing learning的算法，效果不一定比深度方法差，端到端可能不一定要做，但是深度学习的常见端到端。</li>
+</ul>
+</li>
+</ul>
+<p><img src="image-20200311230223713.png" style="zoom:50%;" /></p>
+<h2 id="正则项-惩罚项"><a href="#正则项-惩罚项" class="headerlink" title="正则项/惩罚项"></a>正则项/惩罚项</h2><ul>
+<li>度量假设空间的大小，高次多项式空间比线性空间大；</li>
+<li>控制模型复杂度。因为机器学习的模型的泛化误差要求，在足够小（简单）的模型上足够大的训练集上训练得到足够小的训练误差，这样的模型才可能是在未知测试数据上效果好（泛化误差小）的模型。</li>
+</ul>
+<p><img src="image-20200311231046782.png" style="zoom:50%;" /></p>
+<h2 id="loss-function损失函数"><a href="#loss-function损失函数" class="headerlink" title="loss function损失函数"></a>loss function损失函数</h2><ul>
+<li><p>0-1损失函数和分类准确率是完全对应的，也即和学习出来模型的评价准则对应；</p>
+<ul>
+<li><blockquote>
+<p>评价准则：查准率，查全率，ROC等，直接针对它们优化是很困难的。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>hinge loss, logistic loss不对应，针对它们的优化和最终用来评价模型的准则并不等价。</p>
+</li>
+</ul>
+<h2 id="linear-regression线性回归"><a href="#linear-regression线性回归" class="headerlink" title="linear regression线性回归"></a>linear regression线性回归</h2><p><img src="/image-20200311231800367.png" alt="image-20200311231800367" style="zoom:50%;" /></p>
+<ul>
+<li>L2损失函数（均方误差）；</li>
+<li>线性假设空间；</li>
+<li>L2二范数正则项；</li>
+<li>目标函数有闭式解（正规方程normal equation），但是一般闭式解意味着大规模的计算量，这是我们不期望的。</li>
+</ul>
+<h2 id="logistic-regression逻辑回归"><a href="#logistic-regression逻辑回归" class="headerlink" title="logistic regression逻辑回归"></a>logistic regression逻辑回归</h2><p><img src="/image-20200311232358886.png" alt="image-20200311232358886" style="zoom:50%;" /></p>
+<ul>
+<li>logistic损失函数；</li>
+<li>不能求闭式解，用梯度下降法迭代求解。</li>
+</ul>
+<h2 id="softmax-regression"><a href="#softmax-regression" class="headerlink" title="softmax regression"></a>softmax regression</h2><p><img src="/image-20200311233310919.png" alt="image-20200311233310919" style="zoom:50%;" /></p>
+<ul>
+<li><p>logistic 回归的多分类形式；</p>
+</li>
+<li><p>softmax function：将score变成probability；</p>
+<p><img src="/image-20200311233529287.png" alt="image-20200311233529287" style="zoom:50%;" /></p>
+</li>
+<li><p>交叉熵cross entropy损失函数：预测概率向量和标签（概率）向量的距离。</p>
+</li>
+</ul>
+<h2 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h2><p><img src="/image-20200311234028935.png" alt="image-20200311234028935" style="zoom: 50%;" /></p>
+<ul>
+<li><p>近似误差：假设空间好不好，近似误差太大可能就需要换一个假设空间更大的模型；</p>
+</li>
+<li><p>估计误差：估计误差大则说明假设空间可能太大了，否则学习算法在太大的假设空间中可能找不到最优的假设。</p>
+<ul>
+<li><blockquote>
+<p>深度学习就是要学习feature extraction让假设空间和真实目标函数之间的gap变小。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参数化与非参数化"><a href="#参数化与非参数化" class="headerlink" title="参数化与非参数化"></a>参数化与非参数化</h2><p><img src="/image-20200311234413017.png" alt="image-20200311234413017" style="zoom:50%;" /></p>
+<h2 id="维度灾难与流形学习"><a href="#维度灾难与流形学习" class="headerlink" title="维度灾难与流形学习"></a>维度灾难与流形学习</h2><p><img src="/image-20200311234550862.png" alt="image-20200311234550862" style="zoom:50%;" /></p>
+<ul>
+<li><p>高维空间十分稀疏，在“虫洞”中维度可能低一些；数据在流形行上的维度可能低于输入空间的维度，因此在流形的低维空间上就可能做数据的相似度等建模。</p>
+<ul>
+<li><blockquote>
+<p>unsupervised representation learning</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="偏差与方差"><a href="#偏差与方差" class="headerlink" title="偏差与方差"></a>偏差与方差</h2><p><img src="/image-20200311234952926.png" alt="image-20200311234952926" style="zoom:50%;" /></p>
+<h2 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h2><p><img src="/image-20200311235338823.png" alt="image-20200311235338823" style="zoom:50%;" /></p>
+<h2 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h2><p><img src="/image-20200311235453094.png" alt="image-20200311235453094" style="zoom:50%;" /></p>
+<ul>
+<li><p>不同超参，在训练集上分别训练，在验证集上检验效果，选效果最好的超参。</p>
+<ul>
+<li><blockquote>
+<p>暴力方法：Auto-ML</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -646,7 +747,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#校内深度学习公开课"><span class="nav-text">校内深度学习公开课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-text">introduction</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#校内深度学习公开课"><span class="nav-text">校内深度学习公开课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-introduction"><span class="nav-text">1. introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则项-惩罚项"><span class="nav-text">正则项&#x2F;惩罚项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function损失函数"><span class="nav-text">loss function损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-regression线性回归"><span class="nav-text">linear regression线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logistic-regression逻辑回归"><span class="nav-text">logistic regression逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#softmax-regression"><span class="nav-text">softmax regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#误差"><span class="nav-text">误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数化与非参数化"><span class="nav-text">参数化与非参数化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#维度灾难与流形学习"><span class="nav-text">维度灾难与流形学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏差与方差"><span class="nav-text">偏差与方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化"><span class="nav-text">泛化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-text">模型选择</span></a></li></ol></li></ol></div>
             
 
           </div>
