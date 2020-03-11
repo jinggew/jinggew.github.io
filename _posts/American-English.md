@@ -30,6 +30,8 @@ typora-root-url: American-English
 
 - 合适的melody不是每个词音调都一样，也不是一个词高一个词低。而是将content words强调出来后，如果后面是function words，开始逐渐降低，直到遇到下一个需要强调的词。
 
+  ![]( https://github.com/jinggew/jinggew.github.io/blob/source/_posts/American-English/image-20200204160431912.png )
+
   ![](image-20200204160431912.png)
 
 -  另外强调content words的同时，除了降低function words的音量、音调和音长，也可以将不重要的function words做一下特殊处理。
