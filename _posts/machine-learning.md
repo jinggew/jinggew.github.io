@@ -19,7 +19,7 @@ typora-root-url: machine-learning
 
 ## 1. introduction
 
-<img src="image-20200311220116042.png" style="zoom:50%;" />
+ ![](https://github.com/jinggew/jinggew.github.io/blob/source/_posts/machine-learning/image-20200311220116042.png) 
 
 <img src="image-20200311220706311.png" style="zoom:50%;" />
 
