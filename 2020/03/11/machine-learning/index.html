@@ -124,7 +124,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;index.html">
 <meta property="og:site_name" content="Jingge&#39;s blog">
 <meta property="og:description" content="从校内深度学习公开课开始，每天高效地学习与记录吧！">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311220116042.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;github.com&#x2F;jinggew&#x2F;jinggew.github.io&#x2F;blob&#x2F;source&#x2F;_posts&#x2F;machine-learning&#x2F;image-20200311220116042.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311220706311.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235135688.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311230016827.png">
@@ -140,15 +140,21 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311234952926.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235338823.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200311235453094.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200314221135319.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200314221441453.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200314222934879.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200315001105621.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200315001821550.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;image-20200315002509926.png">
 <meta property="article:published_time" content="2020-03-11T12:37:29.000Z">
-<meta property="article:modified_time" content="2020-03-11T16:03:58.628Z">
+<meta property="article:modified_time" content="2020-03-14T16:30:37.813Z">
 <meta property="article:author" content="Jingge">
 <meta property="article:tag" content="Machine Learning">
 <meta property="article:tag" content="notes">
 <meta property="article:tag" content="校内公开课">
 <meta property="article:tag" content="Deep Learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;11&#x2F;machine-learning&#x2F;image-20200311220116042.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;github.com&#x2F;jinggew&#x2F;jinggew.github.io&#x2F;blob&#x2F;source&#x2F;_posts&#x2F;machine-learning&#x2F;image-20200311220116042.png">
 
 
 
@@ -366,8 +372,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-03-12T00:03:58+08:00">
-                2020-03-12
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-15T00:30:37+08:00">
+                2020-03-15
               </time>
             
           </span>
@@ -460,7 +466,8 @@
       
         <p>从校内深度学习公开课开始，每天高效地学习与记录吧！</p>
 <a id="more"></a> 
-<h1 id="校内深度学习公开课"><a href="#校内深度学习公开课" class="headerlink" title="校内深度学习公开课"></a>校内深度学习公开课</h1><h2 id="1-introduction"><a href="#1-introduction" class="headerlink" title="1. introduction"></a>1. introduction</h2><p><img src="image-20200311220116042.png" style="zoom:50%;" /></p>
+<p><strong>目录</strong></p>
+<h1 id="校内深度学习公开课"><a href="#校内深度学习公开课" class="headerlink" title="校内深度学习公开课"></a>校内深度学习公开课</h1><h2 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h2><p> <img src="https://github.com/jinggew/jinggew.github.io/blob/source/_posts/machine-learning/image-20200311220116042.png" alt=""> </p>
 <p><img src="image-20200311220706311.png" style="zoom:50%;" /></p>
 <p><img src="/image-20200311235135688.png" alt="image-20200311235135688" style="zoom:50%;" /></p>
 <p><img src="image-20200311230016827.png" style="zoom:50%;" /></p>
@@ -549,7 +556,36 @@
 </ul>
 </li>
 </ul>
-
+<h2 id="多层感知机Multilayer-Perceptrons"><a href="#多层感知机Multilayer-Perceptrons" class="headerlink" title="多层感知机Multilayer Perceptrons"></a>多层感知机Multilayer Perceptrons</h2><ul>
+<li><p>最早的感知机针对二分类：符号函数作激活函数</p>
+<script type="math/tex; mode=display">
+\hat y = sgn\Big(\sum_i \theta_i x_i -T\Big)\notag</script><p>迭代$T_0$次，也即更新参数$\le T_0$次：</p>
+<script type="math/tex; mode=display">
+\theta=\theta +  y_tx_t,\quad if \ \hat y \not=y_t \\
+\theta=\theta, \quad if \ \hat y =y_t \notag</script><p><img src="image-20200314221135319.png" style="zoom:50%;" /></p>
+</li>
+<li><p>收敛性：（非线性可分情况下没法证明感知机的线性可分算法。但现实很多不是线性可分，所以只能接受这个假设带来的误差等。）收敛性可以用迭代到多少次就不再需要更新参数来衡量；或者说，当这些迭代中一共出现了多少个错分目标之、且我们针对这些更新了参数之后，就不再需要迭代更新参数了，也就是存在下图中的上界值$\Big(\frac{R}{\gamma}\Big)^2$</p>
+<p><img src="/image-20200314221441453.png" alt="image-20200314221441453" style="zoom: 67%;" /></p>
+<ul>
+<li><p>收敛性证明：感知器的收敛速度其实比较慢。可以看到，$\gamma$越大，问题越简单，越线性可分，需要迭代的错误样本数$M$的上界越小，迭代越快，收敛越快；而$R$即最远的样本距离越大，而每次更新的步长是固定的，所以表明越难分类，所以需要迭代的错误样本数$M$的上界越大，迭代越慢，收敛越慢。</p>
+<p><img src="/image-20200314222934879.png" alt="image-20200314222934879" style="zoom: 67%;" /></p>
+</li>
+</ul>
+</li>
+<li><p>本质上表达的是<strong>线性函数</strong>，可以解决与或非，但是单层感知机不能解决异或，通过叠加可以。</p>
+</li>
+<li><p>MLP(Multilayer Perceptrons) 多层感知机：多个感知机layering在一起可以表达universal approximator任意函数（有条件）。MLP的连接是<strong>稀疏</strong>的。</p>
+<p><img src="/image-20200315001105621.png" alt="image-20200315001105621" style="zoom:50%;" /></p>
+<p><img src="/image-20200315001821550.png" alt="image-20200315001821550" style="zoom:50%;" /></p>
+</li>
+<li><p>上述为布尔函数，感知机也可以表示实函数Real function。</p>
+<p><img src="/image-20200315002509926.png" alt="image-20200315002509926" style="zoom:50%;" /></p>
+<blockquote>
+<p>如果感知机的激活函数是符号函数，那么边界其实是不可学习的，因为符号函数没有梯度，不能用基于梯度的反向传播等微积分算法。为了要求可学习，必须要求感知机是可求导的，采用可求导的模型后，可以近似拟合不能精确拟合边界。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="反向传播-Backpropagation"><a href="#反向传播-Backpropagation" class="headerlink" title="反向传播 Backpropagation"></a>反向传播 Backpropagation</h2><h2 id="训练技巧-Practical-training-strategies"><a href="#训练技巧-Practical-training-strategies" class="headerlink" title="训练技巧 Practical training strategies"></a>训练技巧 Practical training strategies</h2><h2 id="深度网络的表达能力Expressiveness-of-deep-networks"><a href="#深度网络的表达能力Expressiveness-of-deep-networks" class="headerlink" title="深度网络的表达能力Expressiveness of deep networks"></a>深度网络的表达能力Expressiveness of deep networks</h2>
       
     </div>
     
@@ -747,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#校内深度学习公开课"><span class="nav-text">校内深度学习公开课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-introduction"><span class="nav-text">1. introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则项-惩罚项"><span class="nav-text">正则项&#x2F;惩罚项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function损失函数"><span class="nav-text">loss function损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-regression线性回归"><span class="nav-text">linear regression线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logistic-regression逻辑回归"><span class="nav-text">logistic regression逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#softmax-regression"><span class="nav-text">softmax regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#误差"><span class="nav-text">误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数化与非参数化"><span class="nav-text">参数化与非参数化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#维度灾难与流形学习"><span class="nav-text">维度灾难与流形学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏差与方差"><span class="nav-text">偏差与方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化"><span class="nav-text">泛化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-text">模型选择</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#校内深度学习公开课"><span class="nav-text">校内深度学习公开课</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-text">introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则项-惩罚项"><span class="nav-text">正则项&#x2F;惩罚项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loss-function损失函数"><span class="nav-text">loss function损失函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linear-regression线性回归"><span class="nav-text">linear regression线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logistic-regression逻辑回归"><span class="nav-text">logistic regression逻辑回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#softmax-regression"><span class="nav-text">softmax regression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#误差"><span class="nav-text">误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数化与非参数化"><span class="nav-text">参数化与非参数化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#维度灾难与流形学习"><span class="nav-text">维度灾难与流形学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏差与方差"><span class="nav-text">偏差与方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化"><span class="nav-text">泛化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型选择"><span class="nav-text">模型选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多层感知机Multilayer-Perceptrons"><span class="nav-text">多层感知机Multilayer Perceptrons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向传播-Backpropagation"><span class="nav-text">反向传播 Backpropagation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练技巧-Practical-training-strategies"><span class="nav-text">训练技巧 Practical training strategies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度网络的表达能力Expressiveness-of-deep-networks"><span class="nav-text">深度网络的表达能力Expressiveness of deep networks</span></a></li></ol></li></ol></div>
             
 
           </div>
